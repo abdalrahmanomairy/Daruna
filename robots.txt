@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /#dr-x9k4m7z2
+
+Sitemap: https://YOUR-SITE.netlify.app/sitemap.xml
+
+# استبدل YOUR-SITE بالرابط الفعلي لموقعك على Netlify
