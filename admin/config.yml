@@ -2,7 +2,6 @@ backend:
   name: github
   repo: abdalrahmanomairy/Daruna
   branch: main
-  branch: main
 
 media_folder: "images"
 public_folder: "/images"
