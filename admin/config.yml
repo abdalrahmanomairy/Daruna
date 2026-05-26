@@ -12,22 +12,21 @@ display_url: https://golden-medovik-28b9a3.netlify.app
 logo_url: https://golden-medovik-28b9a3.netlify.app/logo.png
 
 collections:
-  - name: "data"
-    label: "بيانات الموقع"
-    files:
-      - file: "data/properties.json"
-        label: "قائمة العقارات"
-        name: "properties_list"
-        fields:
-          - label: "العقارات"
-            name: "properties"
-            widget: "list"
-            fields:
-              - { label: "العنوان", name: "title", widget: "string" }
-              - { label: "السعر", name: "price", widget: "number" }
-              - { label: "المنطقة", name: "location", widget: "string" }
-              - { label: "صورة", name: "image", widget: "image" }
-              - { label: "الوصف", name: "description", widget: "text" }
-
+  - name: "properties"
+    label: "العقارات"
+    label_singular: "عقار"
+    folder: "_properties"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "عنوان العقار", name: "title", widget: "string" }
+      - { label: "نوع العقار", name: "type", widget: "select", options: ["شقة", "بيت", "أرض", "محل تجاري"] }
+      - { label: "السعر", name: "price", widget: "number" }
+      - { label: "العملة", name: "currency", widget: "select", options: ["دولار", "ليرة سورية", "ليرة تركية"] }
+      - { label: "المنطقة", name: "location", widget: "string" }
+      - { label: "المساحة (متر مربع)", name: "area", widget: "number" }
+      - { label: "عدد الغرف", name: "rooms", widget: "number", required: false }
+      - { label: "صورة العقار", name: "image", widget: "image" }
+      - { label: "الوصف", name: "description", widget: "text" }
       - { label: "رقم التواصل", name: "phone", widget: "string" }
       - { label: "للبيع أم للإيجار", name: "status", widget: "select", options: ["للبيع", "للإيجار"] }
