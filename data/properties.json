@@ -1,3 +1,11 @@
 {
-  "properties": []
+  "properties": [
+    {
+      "title": "ادلب",
+      "price": 50000,
+      "location": "ادلب",
+      "image": "/images/screenshot-2026-05-13-082154.png",
+      "description": "كبير"
+    }
+  ]
 }
