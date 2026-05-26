@@ -1,12 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+media_library:
+  name: uploadcare
+
 collections:
   - name: "data"
     label: "العقارات"
     files:
       - file: "data/properties.json"
-        label: "العقارات"
+        label: "قائمة العقارات"
         name: "properties"
         fields:
-          - { label: "العنوان", name: "title", widget: "string" }
-          - { label: "السعر", name: "price", widget: "number" }
-          - { label: "المنطقة", name: "location", widget: "string" }
-          - { label: "الصورة", name: "image", widget: "image" }
+          - label: "العقارات"
+            name: "properties"
+            widget: "list"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "السعر", name: "price", widget: "number" }
+              - { label: "المنطقة", name: "location", widget: "string" }
+              - { label: "الصورة", name: "image", widget: "image" }
+              - { label: "الوصف", name: "description", widget: "text" }
