@@ -11,7 +11,7 @@
     });
   }
 </script>
-
+<div id="list"></div>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -2053,6 +2053,27 @@ document.addEventListener('keydown', e => {
   if (e.key === 'F12') e.preventDefault();
   if (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) e.preventDefault();
 });
+</script>
+  و<script>
+fetch("data/properties.json")
+  .then(res => res.json())
+  .then(data => {
+
+    const list = document.getElementById("list");
+
+    data.properties.forEach(item => {
+
+      list.innerHTML += `
+        <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+          <h3>${item.title}</h3>
+          <p>💰 ${item.price}</p>
+          <p>📍 ${item.location}</p>
+        </div>
+      `;
+
+    });
+
+  });
 </script>
 </body>
 </html>
