@@ -5,11 +5,8 @@ backend:
 media_folder: "images"
 public_folder: "/images"
 
-media_library:
-  name: uploadcare
-
 collections:
-  - name: "data"
+  - name: "properties"
     label: "العقارات"
     files:
       - file: "data/properties.json"
@@ -20,8 +17,34 @@ collections:
             name: "properties"
             widget: "list"
             fields:
-              - { label: "العنوان", name: "title", widget: "string" }
-              - { label: "السعر", name: "price", widget: "number" }
-              - { label: "المنطقة", name: "location", widget: "string" }
-              - { label: "الصورة", name: "image", widget: "image" }
+
+              - { label: "عنوان العقار", name: "title", widget: "string" }
+
               - { label: "الوصف", name: "description", widget: "text" }
+
+              - label: "المنطقة"
+                name: "location"
+                widget: "select"
+                options: ["إدلب", "حلب", "دمشق", "ريف دمشق", "حمص", "حماة"]
+
+              - label: "نوع العقار"
+                name: "type"
+                widget: "select"
+                options: ["منزل", "شقة", "محل تجاري", "أرض"]
+
+              - label: "الغرض"
+                name: "purpose"
+                widget: "select"
+                options: ["بيع", "إيجار"]
+
+              - { label: "السعر", name: "price", widget: "number" }
+
+              - { label: "رقم الهاتف", name: "phone", widget: "string" }
+
+              - { label: "واتساب", name: "whatsapp", widget: "string" }
+
+              - { label: "الإيميل", name: "email", widget: "string" }
+
+              - { label: "رابط الموقع (Google Maps)", name: "map", widget: "string" }
+
+              - { label: "الصورة", name: "image", widget: "image" }
