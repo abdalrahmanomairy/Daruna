@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: abdalrahmanomairy/Daruna
+  name: git-gateway
+  branch: main
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
@@ -13,4 +13,4 @@ collections:
         name: "homepage"
         file: "index.html"
         fields:
-          - {label: "Content", name: "body", widget: "text"}
+          - { label: "Content", name: "body", widget: "markdown" }
